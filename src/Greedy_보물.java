@@ -39,7 +39,8 @@ public class Greedy_보물 {
 		
 		
 		for(int i=0;i<N;i++) {
-			total += A[i]*B[N-1-i]; // += 까지 빼먹었네  
+			total += A[i]*B[N-1-i]; //굳이 역방향 정렬 할 필요 없고 배열을 A[i]말고 A[N-1-i] 로 바꿔주면 역방향으로 내림차순으로 곱하는 효과
+			// += 까지 빼먹었네  
 		}
 		
 		System.out.println(total);
