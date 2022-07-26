@@ -1,12 +1,11 @@
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Greedy_보물 {
 	
 	public static int N;
 	public static int A[];
-	public static Integer B[];
+	public static int B[];
 	public static int total;
 
 	public static void main(String[] args) {
@@ -21,29 +20,26 @@ public class Greedy_보물 {
 		N = in.nextInt();
 		
 		A = new int[N];
-		B = new Integer[N];
+		B = new int[N];
 		
 		
 		for(int i=0;i<N;i++) {
 			A[i] = in.nextInt();
 		}
 		
-		int[] A2 = A.clone();
 		
-		Arrays.sort(A2);
+		Arrays.sort(A);
 		
 		
 		for(int i=0;i<N;i++) {
 			B[i] = in.nextInt();
 		}
 		
-		Integer[] B2 = B.clone(); //배열 B는 순서 바꾸면 안되니까 
-		Integer[] B22  = B2;
-		Arrays.sort(B22,Collections.reverseOrder()); // 내림 차순으로 정렬 성공 Integer로 배열 만들어야 
+		Arrays.sort(B);
 		
 		
 		for(int i=0;i<N;i++) {
-			total = A2[i]*B22[i]; //뭔가 하자 total이 정상적으로 움직이지 않네  
+			total += A[i]*B[N-1-i]; //뭔가 하자 total이 정상적으로 움직이지 않네  
 		}
 		
 		System.out.println(total);
