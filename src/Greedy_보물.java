@@ -39,7 +39,7 @@ public class Greedy_보물 {
 		
 		
 		for(int i=0;i<N;i++) {
-			total += A[i]*B[N-1-i]; //뭔가 하자 total이 정상적으로 움직이지 않네  
+			total += A[i]*B[N-1-i]; // += 까지 빼먹었네  
 		}
 		
 		System.out.println(total);
